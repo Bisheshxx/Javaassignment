@@ -1,0 +1,28 @@
+Question 2 b)  pseudocode for a function that determines whether given word is palindrome.
+
+    String reverse(String value)
+    {
+        int len=value.length()-1;
+        String word="";
+        while(len>=0)
+        {
+            word=word+value.charAt(len);
+            len--;
+        }
+         if(value.equals(word))
+        {
+            
+            System.out.println("It is a palindrome");
+        }
+        
+        else
+        {
+            
+            System.out.println("It is not a palindrome");
+        }
+        return word;
+        
+
+    }
+
+// The time complexity of the given function is O(n).

@@ -1,0 +1,52 @@
+Question 2 a) pseudocode for adding two polynomials. 
+
+ public void sum(PolynomialAddition p1, PolynomialAddition p2)
+    {
+        int x,y;
+        Node current1=p1.head;
+        Node current2=p2.head;
+        while(current1!=null && current2!=null)
+        {
+            if(current1.expo==current2.expo)
+            {
+                x=current1.coeff+current2.coeff;
+                y=current1.expo;
+                current1=current1.next;
+                current2=current2.next;
+                
+            }
+            
+            else if(current1.expo>current2.expo)
+            {
+                x=current1.coeff;
+                y=current1.expo;
+                current1=current1.next;
+               
+            }
+            
+            else
+            {
+                x=current2.coeff;
+                y=current2.expo;
+                current2=current2.next;
+               
+            }
+             createNode(x,y); 
+        }
+        
+        while(current1!=null)
+        {
+            x=current1.coeff;
+            y=current1.expo;
+            createNode(x,y);
+            current1=current1.next;
+        }
+        
+        while(current2!=null)
+        {
+            x=current2.coeff;
+            y=current2.expo;
+            createNode(x,y);
+            current2=current2.next;
+        }
+    }
